@@ -1,0 +1,9 @@
+{  
+  "name_of_computation"         : "Run",
+  "pathtowritefile"             : "Results_EEG_data/",
+  "data_path"                   : "tensor_EEG_data/tensor_EEG_4syllables_ISI_430_Subjdata_export_181121_2345_10_windows_normalisation_5_channels_rmved.Rdata",
+  "command_file"                : "cmd.txt",
+  "channels_file"               : "parameter_files/channel_GSN_129ch_BB7w_XYZ.txt",
+  "pathtofigurefile"            : "figures/",
+  "channel_figure_pathtoscript" : "functions/eeglab_topoplot_script.m"
+}

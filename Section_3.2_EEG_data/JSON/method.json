@@ -1,0 +1,35 @@
+{
+  "pathtoscript"              : "functions/",
+  "scale"                     : false,
+  "center"                    : false,
+  "bias"                      : false,
+  "cv.method"                 : "paired_bootstrap",
+  "model.mapper"              : {"mgcca"      : "mapper_mgcca.R",
+                                 "parafac"    : "mapper_parafac.R",
+                                 "cmtf"       : "mapper_par_cmtf.m"},
+  "option.mapper"             : {"mgcca"      : 
+                                             {"design"           : ["hierarchical"], 
+                                              "scheme"           : "factorial"},
+                                 "cmtf"       : 
+                                             {"full_data_parameter_file" : "cmtf_full_data_parameter_file.mat", 
+                                              "full_data_file"           : "cmtf_full_data_file.mat"}},
+  "model.reducer"             : {"mgcca"      : "reducer_mgcca.R",
+                                 "parafac"    : "reducer_parafac.R",
+                                 "cmtf"       : "reducer_cmtf.R"},
+  "bootsrap_samples"          : 200,
+  "nb_of_bootstrap_group"     : 4,
+  "nb_cores"                  : 5,
+  "scale_size_bloc"           : false,
+  "tau"                       : [1.0, 0.0],
+  "ncomp"                     : [2.0, 1.0],
+  "nfac"                      : 2.0,
+  "parfor_bool"               : true,
+  "init"                      : "random",
+  "nstart"                    : 1,
+  "tol"                       : 1e-8,
+  "to_source_in_main"         : ["write_mapper_command.R", "write_reducer_command.R", "run_methods_full_data.R"],
+  "alpha"                     : 0.05,
+  "to_source_in_reducer"      : ["plot_channels.R", "plot_time.R"],
+  "M_regularisation"          : "kronecker_Identity_RGCCA"
+}
+
